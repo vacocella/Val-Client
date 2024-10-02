@@ -56,7 +56,7 @@ export default function PlayerDrawer({
             <PlayerCard
               key={player.playerID}
               player={player}
-              fromTray={true} // Indicate this card is in the drawer
+              fromTray={true}
               onHover={() => onPlayerHover(player.type)}
               onHoverEnd={onPlayerHoverEnd}
               slotSize={slotSize} // Pass the dynamic slot size to PlayerCard

@@ -145,7 +145,7 @@ export default function ManagerPage() {
         {/* Chatbot */}
         {isChatVisible && (
           <div
-            className={`absolute top-0 right-0 h-full w-64 bg-gray-200 p-4 shadow-lg z-50 overflow-y-auto transition-transform duration-300`}
+            className={`absolute top-0 right-0 h-full w-100 bg-gray-200 p-4 shadow-lg z-50 overflow-y-auto transition-transform duration-300`}
           >
             <Chatbot />
           </div>

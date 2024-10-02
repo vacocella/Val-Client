@@ -27,8 +27,8 @@ export default function PlayerCard({
       onMouseEnter={onHover}
       onMouseLeave={onHoverEnd}
       style={{
-        width: slotSize.width, // Apply the dynamic width
-        height: slotSize.height, // Apply the dynamic height
+        width: slotSize.width, 
+        height: slotSize.height, 
       }}
     >
       <Card className="w-full h-full relative bg-yellow-200 text-black">
@@ -39,9 +39,9 @@ export default function PlayerCard({
             <Image
               src={player.team_logo}
               alt="Team Logo"
-              layout="fill" // Make the logo fill the background
-              objectFit="cover" // Ensure it covers the area
-              className="rounded-full" // Optional: Adds a rounded effect
+              layout="fill" 
+              objectFit="cover" 
+              className="rounded-full"
             />
           </div>
 
@@ -65,7 +65,7 @@ export default function PlayerCard({
             <p><strong>Aim:</strong> {player.stats.aim}</p>
             <p><strong>Game Sense:</strong> {player.stats.game_sense}</p>
             <p><strong>Clutch:</strong> {player.stats.clutch}</p>
-            <p><strong>Type:</strong> {player.type.join(', ')}</p> {/* Show the player's types */}
+            <p><strong>Type:</strong> {player.type.join(', ')}</p>
           </div>
         </CardContent>
       </Card>

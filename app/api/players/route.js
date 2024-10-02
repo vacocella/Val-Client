@@ -4,10 +4,10 @@ export async function GET(request) {
   const players = [
     {
       playerID: 1,
-      playerName: 'John Doe',
+      playerName: 'Tenz',
       country: 'USA',
       // team_logo: 'https://example.com/team1.png',
-      // player_url: 'https://example.com/player1.png',
+      player_url: 'https://owcdn.net/img/6416950ce6638.png',
       type: ['dualist', 'flex'],
       stats: {
         aim: 85,

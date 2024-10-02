@@ -1,0 +1,64 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: #ffffff;
+  --foreground: #171717;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0a0a0a;
+    --foreground: #ededed;
+  }
+}
+
+body {
+  color: var(--foreground);
+  background: var(--background);
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
+/* app/globals.css */
+.card-container {
+  perspective: 1000px;
+  position: relative;
+}
+
+.card-front,
+.card-back {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  backface-visibility: hidden;
+  border-radius: 10px;
+}
+
+/* Front of the card flips */
+.card-front {
+  transform: rotateY(0deg);
+}
+
+/* Back of the card doesn't flip */
+.card-back {
+  transform: rotateY(180deg);
+}
+
+.flip-card .card-front {
+  transform: rotateY(180deg);
+}
+
+.flip-card .card-back {
+  transform: rotateY(0deg);
+}
+
+/* Hover effect with box-shadow lighting */
+.card-container:hover {
+  transition: box-shadow 0.3s ease-in-out;
+}

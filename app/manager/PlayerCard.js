@@ -18,7 +18,8 @@ export default function PlayerCard({
     }),
   });
 
-  const fallbackImage = 'https://www.vlr.gg/img/base/ph/sil.png'; // Fallback image if player_url is not provided
+  const fallbackImage_player = 'https://www.vlr.gg/img/base/ph/sil.png'; 
+  const fallbackImage_team = 'https://www.vlr.gg/img/vlr/tmp/vlr.png'; 
 
   return (
     <div
@@ -37,7 +38,7 @@ export default function PlayerCard({
           {/* Team logo placed behind the player face */}
           <div className="absolute inset-0 flex items-center justify-center opacity-30">
             <Image
-              src={player.team_logo}
+              src={player.team_logo || fallbackImage_team}
               alt="Team Logo"
               layout="fill" 
               objectFit="cover" 
@@ -48,7 +49,7 @@ export default function PlayerCard({
           {/* Player face */}
           <div className="relative w-16 h-16 mb-2 z-10">
             <Image
-              src={player.player_url || fallbackImage}
+              src={player.player_url || fallbackImage_player}
               alt={`${player.playerName}'s face`}
               width={64}
               height={64}
